@@ -11,10 +11,18 @@ fun main(args: Array<String>) {
     }
 
     println("names that contains b or m with ignore case")
+    // First way
     names.forEach{
        if ( it.contains("m" , true) || it.contains("b" , true) ){
            println(it.uppercase())
        }
+    }
+
+    //Second way
+    names.filter {
+        ( it.contains("m" , true) || it.contains("b" , true) )
+    }.forEach{
+        println(it.uppercase())
     }
 
 }
